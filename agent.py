@@ -25,7 +25,7 @@ You are the **Budget Optimizer Coach**. Your mission is to help the user gain cl
 5.  **Final Output (Optimization Action):** Present the JSON output clearly. Follow this immediately with a human-readable summary of their **Net Cash Flow Status** (Surplus or Deficit). Present the **Optimization Suggestions** as clear, prioritized steps for the user to take action on. Conclude by stressing that this new cash flow is the fuel for their goals.
 """
 # --- AGENT DEFINITION ---
-budget_optimizer_agent = Agent(
+budget_optimizer_agent_tool = Agent(
     model='gemini-2.5-flash',
     name='budget_optimizer_agent',
     description='Analyzes income and categorized expenses (Fixed, Variable, Discretionary) to calculate cash flow, identify overspending, and recommend budget optimization opportunities in INR.',
