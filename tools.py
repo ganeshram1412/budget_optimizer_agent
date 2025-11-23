@@ -1,6 +1,4 @@
 # tools.py (Adding to your existing tools)
-
-from google.adk.agents.llm_agent import AgentTool
 from typing import Dict, Any
 
 def spending_categorizer_and_analyser(
@@ -54,22 +52,3 @@ def spending_categorizer_and_analyser(
         "funding_shortfall_inr": funding_shortfall,
         "optimization_areas": optimization_suggestions
     }
-
-# --- Register the Tool for ADK ---
-
-spending_categorizer_and_analyser_tool = AgentTool(
-    name="spending_categorizer_and_analyser",
-    description="Calculates monthly net cash flow and identifies budget optimization areas by comparing expenses (Fixed, Variable, Discretionary) against income and savings goals.",
-    func=spending_categorizer_and_analyser,
-    schema={
-        "type": "object",
-        "properties": {
-            "monthly_net_income_inr": {"type": "number", "description": "The user's monthly take-home (net) income in INR."},
-            "fixed_expenses_inr": {"type": "number", "description": "The total monthly cost of fixed expenses (rent, EMIs, insurance) in INR."},
-            "variable_expenses_inr": {"type": "number", "description": "The total monthly cost of variable expenses (groceries, transport, utilities) in INR."},
-            "discretionary_spending_inr": {"type": "number", "description": "The total monthly cost of discretionary spending (dining out, entertainment, shopping) in INR."},
-            "target_savings_inr": {"type": "number", "description": "The user's target monthly savings or debt payment amount for their goals in INR."}
-        },
-        "required": ["monthly_net_income_inr", "fixed_expenses_inr", "variable_expenses_inr", "discretionary_spending_inr"]
-    }
-)

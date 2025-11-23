@@ -1,7 +1,7 @@
 # budget_optimizer_agent.py
 
 from google.adk.agents.llm_agent import Agent
-from .tools import spending_categorizer_and_analyser_tool # Import the specific tool
+from .tools import spending_categorizer_and_analyser # Import the specific tool
 
 # --- OPTIMIZED AGENT INSTRUCTION ---
 optimized_agent_instruction = """
@@ -28,6 +28,6 @@ budget_optimizer_agent_tool = Agent(
     name='budget_optimizer_agent',
     description='Analyzes income and categorized expenses (Fixed, Variable, Discretionary) to calculate cash flow and recommend budget optimization opportunities in INR.',
     instruction=optimized_agent_instruction,
-    tools=[spending_categorizer_and_analyser_tool],
+    tools=[spending_categorizer_and_analyser],
     output_key="budget_analysis_data"
 )
