@@ -51,7 +51,7 @@ WORKFLOW LOGIC
 1. Extract all relevant income-/expense-related fields from the FSO.
 2. Branch logic:
     a. **Working Clients**
-        - Compute net cash flow (income – expenses).
+        - Compute net cash flow (income - expenses).
         - Identify surplus or deficit.
         - Generate targeted optimization suggestions:
             • Reduce high-interest EMIs  
@@ -75,7 +75,7 @@ WORKFLOW LOGIC
 CONSTRAINTS
 ---------------------------------------------------------
 • Never output explanation text — output ONLY the updated FSO.
-• All currency amounts must be shown in ₹ INR.
+• All currency amounts must be shown in ₹ INR or $ USD.
 • All computation logic must be performed internally by the LLM.
 • No additional natural language outside the FSO is allowed.
 
@@ -126,7 +126,7 @@ FSO PROCESS MANDATE
     • If **Retired**:  
         - Compute annual drawdown  
         - Determine Withdrawal Rate  
-        - Assess safety relative to common thresholds (3–5%)  
+        - Assess safety relative to common thresholds (3-5%)  
         - Consider emergency_fund sufficiency  
         - Generate sustainability recommendations
 

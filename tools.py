@@ -111,7 +111,7 @@ def spending_categorizer_and_analyser(
     Parameters
     ----------
     monthly_net_income_inr : float
-        Monthly take-home income after taxes (in INR).
+        Monthly take-home income after taxes (in INR or USD).
 
     fixed_expenses_inr : float
         Essential/mandatory monthly commitments (rent, EMIs, insurance, etc.)
